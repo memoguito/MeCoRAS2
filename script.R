@@ -46,6 +46,7 @@ p <- ggplot(data=df) +
 
 plot(p)
 
+# Geometry ----
 df.sf <- subset(df) %>% st_as_sf(coords=c("x", "y"))
 vpolyg <- do.call(c, st_geometry(df.sf)) %>%
     st_voronoi() %>%
